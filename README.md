@@ -44,4 +44,4 @@ This project demonstrates how to use Natural Language Processing (NLP) and Large
    streamlit run app.py
 
 
-![alt text](assets\image.png)
+![alt text](assets/image.png)
