@@ -22,7 +22,7 @@ azure_deployment=os.getenv("OPENAI_CHAT_MODEL")
 openai_api_base= os.getenv("OPENAI_API_BASE")
 openai_api_key = os.getenv("OPENAI_API_KEY")
 openai_api_type =os.getenv("OPENAI_API_TYPE")
-openai_api_version = os.getenv("PENAI_API_VERSION")
+openai_api_version = os.getenv("OPENAI_API_VERSION", "2023-07-01-preview")
 
 DATABASE_URL = "sqlite:///school.db"
 
@@ -92,11 +92,11 @@ init_db()
 
 
 db = SQLDatabase(engine)  
-llm = AzureChatOpenAI(azure_deployment,
-                      openai_api_base,
-                      openai_api_key , 
-                      openai_api_type,
-                      openai_api_version,
+llm = AzureChatOpenAI(azure_deployment=azure_deployment,
+                      openai_api_base=openai_api_base,
+                      openai_api_key=openai_api_key, 
+                      openai_api_type=openai_api_type,
+                      openai_api_version=openai_api_version,
                       temperature=0)
 
 
