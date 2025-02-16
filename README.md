@@ -30,7 +30,7 @@ This project demonstrates how to use Natural Language Processing (NLP) and Large
 - Python
 - LangChain
 - SQL Databases
-- OpenAI API
+- Azure OpenAI API
 
 ## Getting Started
 1. Clone this repository:
